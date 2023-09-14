@@ -65,8 +65,6 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
    
   }
 
-  nuevo=posicion;
-
   
 
 }
