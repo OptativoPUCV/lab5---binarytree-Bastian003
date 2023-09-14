@@ -479,3 +479,21 @@ Thu 14 Sep 2023 07:37:02 PM UTC:
  tests:  11|6
 total_score: 15/70
 fb6e75c
+Thu 14 Sep 2023 07:50:11 PM UTC: 
+ treemap.c | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:68:7: error: ‘t’ undeclared (first use in this function)
+   68 |       t
+      |       ^
+treemap.c:68:7: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:68:8: error: expected ‘;’ before ‘}’ token
+   68 |       t
+      |        ^
+      |        ;
+   69 | 
+   70 |     }
+      |     ~   
+Compilation failed
+e5e6b49

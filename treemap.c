@@ -58,13 +58,19 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     int resultado =tree->lower_than(key,tree->current->pair->key);
     
     if(resultado==0){
-      tree->current=tree->current->right;
+      if(tree->current->right==NULL){
+        tree->current->left=nuevo;
+      }
     }else{
-      tree->current=tree->current->left;
+      if(tree->current->left==NULL){
+        tree->current->left=nuevo;
+      }
+      t
+     
     }
    
   }
-  tree->current=nuevo;
+
   
 
   
