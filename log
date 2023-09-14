@@ -19,3 +19,14 @@ Thu 14 Sep 2023 04:36:27 AM UTC:
  tests:  4|7
 total_score: 5/70
 7c2261c
+Thu 14 Sep 2023 04:49:08 AM UTC: 
+ treemap.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:86:18: error: returning ‘TreeNode *’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   86 |       return tree->current;
+      |              ~~~~^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cb91dd8
