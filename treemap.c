@@ -49,49 +49,22 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
-/*  if(tree==NULL){
-    return;
+  if(tree==NULL){
+    return ;
   }
-  TreeNode * nuevomapa= createTreeNode( key,  value);
-  
-    if(nuevomapa==NULL){
-    return;
-  }
-  if(tree->root==NULL){
-    tree->root=nuevomapa;
-    tree->current=nuevomapa;
-
-
-    return;
-  }
-  TreeNode* posicion=tree->root;
-  TreeNode * padre = 0;
-  
-  while(posicion!=NULL){
-    padre=posicion;
-    int resultado =tree->lower_than(key,posicion->pair->key);
+  TreeNode* inserto=tree->root;
+  while(inserto!=NULL){
+    int resultado =tree->lower_than(key,inserto->pair->key); 
     if(resultado==0){
-      free(nuevomapa);
-      return;
-    }else if(resultado>0){
-      posicion=posicion->right;
-      
-    }else if(resultado<0){
-      posicion=posicion->left;
-      
+      inserto=inserto->right;
+    }else{
+      inserto=inserto->left;
     }
   }
-  nuevomapa->parent=padre;
-  int padreS=tree->lower_than(key,padre->pair->key);
-  if(padreS>0){
-    padre->right=nuevomapa;
-    
-  }else if(padreS<0){
-    padre->left=nuevomapa;
-    
-  }
-  tree->current=nuevomapa;
-*/
+  inserto=inserto->pair->key;
+  inserto=inserto->pair->value;
+  return;
+
 }
 
 TreeNode * minimum(TreeNode * x){
@@ -123,7 +96,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   if(tree->root==NULL){
     return NULL;
   }
-  //solucionar esta funcion que me actualiza todo tranqui pero no encuntra la clave y no me retorna null
+
   TreeNode* posicion=tree->root;
 
   while(posicion !=NULL){
