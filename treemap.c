@@ -52,18 +52,22 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
   if(tree==NULL){
     return ;
   }
-  TreeNode* inserto=tree->root;
-  while(inserto!=NULL){
-    int resultado =tree->lower_than(key,inserto->pair->key); 
+  TreeNode* nuevo=createTreeNode( key, value); 
+  TreeNode* posicion=tree->root;
+  while(posicion !=NULL){
+    int resultado =tree->lower_than(key,posicion->pair->key);
+    int resultado2=tree->lower_than(value,posicion->pair->value);
     if(resultado==0){
-      inserto=inserto->right;
+      posicion=posicion->right;
     }else{
-      inserto=inserto->left;
+      posicion=posicion->left;
     }
+   
   }
-  inserto=inserto->pair->key;
-  inserto=inserto->pair->value;
-  return;
+  posicion->pair->value=nuevo;
+  posicion->pair->key=nuevo;
+
+  
 
 }
 

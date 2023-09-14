@@ -375,3 +375,14 @@ Thu 14 Sep 2023 07:07:20 PM UTC:
  tests:  11|6
 total_score: 15/70
 56e8e3e
+Thu 14 Sep 2023 07:20:44 PM UTC: 
+ treemap.c | 20 ++++++++++++--------
+ 1 file changed, 12 insertions(+), 8 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:59:9: error: unused variable ‘resultado2’ [-Werror=unused-variable]
+   59 |     int resultado2=tree->lower_than(value,posicion->pair->value);
+      |         ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9335e11
