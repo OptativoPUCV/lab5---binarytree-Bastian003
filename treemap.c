@@ -128,16 +128,15 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
   while(posicion !=NULL){
     int resultado =tree->lower_than(key,posicion->pair->key);
-    if(resultado==0){
-      tree->current=posicion;
+    if(is_equal(tree,key,tree->current->pair->key)){
       return posicion->pair;
-    }else if(resultado>0){
-      posicion=posicion->right;
-      
-    }else if(resultado<0){
-      posicion=posicion->left;
-      
     }
+    if(resultado==0){
+       posicion=posicion->right;
+    }else{
+      posicion=posicion->left;
+    }
+    
   }
  
   tree->current=NULL;
