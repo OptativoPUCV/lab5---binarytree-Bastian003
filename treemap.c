@@ -70,8 +70,10 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     if(resultado==0){
       return;
     }else if(resultado>0){
+      posicion=posicion->right;
       return;
     }else if(resultado<0){
+      posicion=posicion->left;
       return;
     }
   }
