@@ -55,7 +55,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
   TreeNode* nuevo=createTreeNode( key, value); 
   TreeNode* posicion=tree->root;
   while(posicion !=NULL){
-    int resultado =tree->lower_than(key,posicion->pair->key);
+    int resultado =tree->lower_than(key,nuevo->pair->key);
     
     if(resultado==0){
       posicion=posicion->right;
