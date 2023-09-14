@@ -58,9 +58,9 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     int resultado =tree->lower_than(key,tree->current->pair->key);
     
     if(resultado==0){
-      posicion=posicion->right;
+      tree->current=tree->current->right;
     }else{
-      posicion=posicion->left;
+      tree->current=tree->current->left;
     }
    
   }
