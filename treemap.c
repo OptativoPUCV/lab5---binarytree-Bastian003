@@ -118,9 +118,11 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
   if(tree ==NULL){
+    tree->current = NULL;
     return NULL;
   }
   if(tree->root==NULL){
+    tree->current = NULL;
     return NULL;
   }
   //solucionar esta funcion que me actualiza todo tranqui pero no encuntra la clave y no me retorna null
