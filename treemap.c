@@ -87,10 +87,10 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       return posicion->pair;
     }else if(resultado==1){
       posicion=posicion->right;
-      return posicion->pair;
+      
     }else if(resultado==-1){
       posicion=posicion->left;
-      return posicion->pair;
+      
     }
   }
   
