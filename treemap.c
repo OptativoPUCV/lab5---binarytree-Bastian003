@@ -61,11 +61,13 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       if(tree->current->right==NULL){
         tree->current->left=nuevo;
       }
+      tree->current=tree->current->right;
     }else{
       if(tree->current->left==NULL){
         tree->current->left=nuevo;
       }
-      t
+      tree->current=tree->current->left;
+      
      
     }
    
