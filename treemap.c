@@ -81,7 +81,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   if(tree->root==NULL){
     return NULL;
   }
-  
+  //solucionar esta funcion que me actualiza todo tranqui pero no encuntra la clave y no me retorna null
   TreeNode* posicion=tree->root;
   while(posicion !=NULL){
     int resultado =tree->lower_than(key,posicion->pair->key);
@@ -95,6 +95,9 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       posicion=posicion->left;
       
     }
+  }
+  if(posicion==NULL){
+    return NULL;
   }
   tree->current=NULL;
   return NULL;
