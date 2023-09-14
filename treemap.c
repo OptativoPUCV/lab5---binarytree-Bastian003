@@ -85,10 +85,10 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
   int padreS=tree->lower_than(key,padre->pair->key);
   if(padreS>0){
     padre->right=nuevomapa;
-    return;
+    
   }else if(padreS<0){
     padre->left=nuevomapa;
-    return;
+    
   }
   tree->current=nuevomapa;
 
