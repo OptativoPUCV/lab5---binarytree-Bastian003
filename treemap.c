@@ -65,9 +65,13 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     return;
   }
   TreeNode* posicion=tree->root;
+  TreeNode * padre = 0;
+  
   while(tree->root !=NULL){
+    padre=posicion;
     int resultado =tree->lower_than(key,posicion->pair->key);
     if(resultado==0){
+      
       return;
     }else if(resultado>0){
       posicion=posicion->right;
@@ -76,6 +80,15 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       posicion=posicion->left;
       return;
     }
+  }
+  nuevomapa->parent=padre;
+  int padreS=tree->lower_than(key,padre->pair->key);
+  if(padreS>0){
+    padre->right=nuevomapa;
+    return;
+  }else if(padreS<0){
+    padre->left=nuevomapa;
+    return;
   }
 
 }
