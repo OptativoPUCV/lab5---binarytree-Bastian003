@@ -90,6 +90,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     padre->left=nuevomapa;
     return;
   }
+  tree->current=nuevomapa;
 
 }
 
