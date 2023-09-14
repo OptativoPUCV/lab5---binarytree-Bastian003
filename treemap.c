@@ -71,7 +71,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     padre=posicion;
     int resultado =tree->lower_than(key,posicion->pair->key);
     if(resultado==0){
-      
+      free(nuevomapa);
       return;
     }else if(resultado>0){
       posicion=posicion->right;
