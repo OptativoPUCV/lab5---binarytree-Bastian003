@@ -87,7 +87,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     int resultado =tree->lower_than(key,posicion->pair->key);
     if(resultado==0){
       tree->current=posicion;
-      return posicion->pair;
+      return posicion->pair->value;
     }else if(resultado>0){
       posicion=posicion->right;
       
