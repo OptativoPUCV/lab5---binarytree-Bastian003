@@ -131,9 +131,8 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     if(is_equal(tree,key,tree->current->pair->key)){
      
       return tree->current->pair;
-    }
-    if(resultado==0){
-       posicion=posicion->right;
+    }else if(resultado==0){
+      posicion=posicion->right;
     }else{
       posicion=posicion->left;
     }
