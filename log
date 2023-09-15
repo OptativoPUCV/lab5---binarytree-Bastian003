@@ -557,3 +557,20 @@ Fri 15 Sep 2023 11:20:53 PM UTC:
  tests:  16|4
 total_score: 30/70
 2de319a
+Fri 15 Sep 2023 11:25:28 PM UTC: 
+ treemap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:115:23: error: expected ‘;’ before ‘}’ token
+  115 |       hijo=node->right
+      |                       ^
+      |                       ;
+  116 |     }
+      |     ~                  
+treemap.c:111:15: error: variable ‘hijo’ set but not used [-Werror=unused-but-set-variable]
+  111 |     TreeNode* hijo;
+      |               ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2cec93e
