@@ -202,11 +202,13 @@ Pair * firstTreeMap(TreeMap * tree) {
     indice=indice->left;
   }
   tree->root =indice;
+
+
   return indice->pair;
   
-  return NULL;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
+  
+  return NULL;
 }
