@@ -197,9 +197,11 @@ Pair * firstTreeMap(TreeMap * tree) {
   if(tree==NULL){
     return NULL;
   }
-  while(tree->root->left!=NULL){
-    tree->root=tree->root->left;
+  TreeNode* indice=tree->root;
+  while(indice->left!=NULL){
+    indice=indice->left;
   }
+  tree->indice=indice;
   return NULL;
 }
 
