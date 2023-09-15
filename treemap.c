@@ -201,7 +201,9 @@ Pair * firstTreeMap(TreeMap * tree) {
   while(indice->left!=NULL){
     indice=indice->left;
   }
-  tree->indice=indice;
+  tree->root =indice;
+  return indice->pair;
+  
   return NULL;
 }
 
