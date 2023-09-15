@@ -197,6 +197,9 @@ Pair * firstTreeMap(TreeMap * tree) {
   if(tree==NULL){
     return NULL;
   }
+  while(tree->root->left!=NULL){
+    tree->root=tree->root->left;
+  }
   return NULL;
 }
 
