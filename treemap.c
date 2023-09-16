@@ -199,17 +199,16 @@ Pair * upperBound(TreeMap * tree, void* key) {
 
   while(posicion !=NULL){
     int resultado =tree->lower_than(key,posicion->pair->key);
-    if(is_equal(tree,key,posicion->pair->key)){
+    if(resultado==0){
       tree->current=posicion;
-     
       return posicion->pair;
-    }else if(resultado==0){
-      posicion=posicion->right;
+    } else if (resultado<0){
       ub_node=posicion;
-    }else{
       posicion=posicion->left;
-      
+    }else{
+      posicion=posicion->right;
     }
+           
    
   }
   if(ub_node!=NULL){
