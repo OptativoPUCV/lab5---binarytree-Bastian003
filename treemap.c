@@ -201,19 +201,20 @@ Pair * upperBound(TreeMap * tree, void* key) {
     int resultado =tree->lower_than(key,posicion->pair->key);
     if(is_equal(tree,key,posicion->pair->key)){
       tree->current=posicion;
-      ub_node=posicion;
+     
       return posicion->pair;
     }else if(resultado==0){
+      ub_node=posicion;
       posicion=posicion->right;
-      ub_node=posicion;
+      
     }else{
-      posicion=posicion->left;
       ub_node=posicion;
+      posicion=posicion->left;
+      
       
     }
    
   }
-  ub_node=posicion;
   if(ub_node!=NULL){
     return ub_node->pair;
   }else{
