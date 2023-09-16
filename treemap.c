@@ -226,5 +226,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     tree->current=papa;
     papa=papa->parent;
   }
+
+  tree->current=papa;
   return NULL;
 }
