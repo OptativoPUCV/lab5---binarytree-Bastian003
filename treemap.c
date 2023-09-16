@@ -208,7 +208,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
       posicion=posicion->right;
       
     }else{
-      ub_node=posicion;
+      
       posicion=posicion->left;
       
       
