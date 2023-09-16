@@ -221,5 +221,10 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
     return tree->current->pair;
   }
+  TreeNode* papa=tree->current->parent;
+  while(papa!=NULL && tree->current== papa->right){
+    tree->current=papa;
+    papa=papa->parent;
+  }
   return NULL;
 }
