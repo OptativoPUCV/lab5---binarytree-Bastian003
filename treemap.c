@@ -228,5 +228,10 @@ Pair * nextTreeMap(TreeMap * tree) {
   }
 
   tree->current=papa;
-  return NULL;
+  if(papa==NULL){
+    return NULL;
+  }else{
+    return papa->pair;
+  }
+  
 }
