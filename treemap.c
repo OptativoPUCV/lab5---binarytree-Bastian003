@@ -202,7 +202,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     if(is_equal(tree,key,posicion->pair->key)){
       tree->current=posicion;
      
-      return tree->current->pair;
+      return posicion->pair;
     }else if(resultado==0){
       posicion=posicion->right;
     }else{
