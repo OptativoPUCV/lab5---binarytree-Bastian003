@@ -213,6 +213,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     }
    
   }
+  ub_node=posicion;
   if(ub_node!=NULL){
     return ub_node->pair;
   }else{
